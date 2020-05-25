@@ -35,8 +35,10 @@ h3 {
 h2 {
     text-transform: uppercase;
     font-size: 16px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h3 {
@@ -46,8 +48,9 @@ h3 {
 
 /*  Layout Styles  */
 
+
 .main-content {
-        text-align: center;
+    text-align: center;
 }
 
 body {
@@ -81,6 +84,24 @@ nav a {
     padding: 60px 60px 10px;
 }
 
+.skills-list {
+    Display: block;
+    list-style: none;
+    padding: 0 16px 20px;
+    color: #616161;
+}
+
+.skills-list li {
+    padding: 10px 30px;
+    background-color: #f5f5f5;
+    margin: 10px auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container p {
+    margin-bottom: 0;
+}
+
 
 /*  Header Styles  */
 
@@ -95,6 +116,15 @@ h1 {
     padding-top: 20px;    
 }
 
+/*  Pseudo Classes  */
+
+a:visited {
+    color: #e8b95a; 
+}
+
+a:hover {
+    color: lightsalmon;
+}
 
 /*  Footer Styles  */
 
@@ -109,13 +139,34 @@ footer {
     padding-bottom: 50px;
 }
 
+.bottom-nav {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.to-top {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
 .footer-name {
-    float: left
+    float: left;
+    background-color: #f5f5f5;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding-left: 1em;
 }
 
 .footer-nav {
     float: right;
 }
+
+.footer-nav a {
+    background-color: #f5f5f5;
+    padding-top: 0;
+}
+
 
 .contact-info h2 {
     padding-top: 50px;
@@ -133,4 +184,123 @@ footer {
     text-decoration: none;
     color: #545454;
     font-weight: bolder;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 769px) {
+    .bottom-nav {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .to-top {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+
+.main-nav {
+    display: inline-block;
+}
+
+.main-nav a {
+    display: inline;
+    background-color: #f5f5f5;
+}
+
+.profile-img {
+    width: 45%;
+    float: right;
+    padding: 60px 20px 40px;
+}
+
+.profile p {
+    padding-top: 60px;
+    text-align: left;
+}
+
+.container {
+    width: 50%;
+    float: left;
+    padding: 0 10px;
+}
+
+.summary {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.skills-list li {
+    display: inline;
+    margin-bottom: 0;
+}
+
+.skills-list {
+    padding-bottom: 80px;
+    margin-bottom: 0;
+}
+
+.bottom-nav {
+    display: inline;
+}
+
+.bottom-nav a {
+    display: inline-block;
+    padding-left: 20px;
+    margin: 30px 0;
+}
+
+.footer-name {
+    margin: 30px 0;
+}
+
+}
+
+@media (min-width: 992px) {
+
+main {
+    border-left: 10px solid #f5f5f5;
+    border-right: 10px solid #f5f5f5;
+}
+
+h1 {
+    float: left;
+    padding-left: 30px;
+
+}
+
+.main-content {
+    width: 90%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.main-nav {
+    float: right;
+}
+
+.container {
+    width: 33.33%;
+}
+
+.main-nav {
+    padding-top: 35px;
+}
+
+.profile p {
+    margin-top: 0;
+}
+
+}
+
+/* Float Clearfix */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
